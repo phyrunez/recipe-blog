@@ -42,3 +42,11 @@ a { color: var(--bs-dark); }
     width: 100%;
     object-fit: cover;
 }
+
+.searchInput {
+    border-radius: 10px 0 0 10px;
+}
+
+.searchBtn {
+    border-radius: 0px 10px 10px 0px;
+}

@@ -1,0 +1,30 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">about</li>
+  </ol>
+</nav>
+<div class="px-4 py-3 my-3 text-center">
+  <h1 class="display-5 fw-bold">About Us</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead">
+      Take your time to read and understand the recipe blog, we aim at building a web solution using recipes as the focus.</p>
+  </div>
+
+  <div class="row my-5 py-5">
+    <% if(aboutData != '') { %>
+      <div class="col-12 col-md-4">
+        <img src="uploads/<%- aboutData.image %>" alt="about-us" class="img-fluid sticky-top" style="top: 20px;" loading="lazy">
+      </div>
+    <% } %>
+    
+    <div class="col-12 col-md-8">
+      <div class="float-start"><i class="bi bi-tag"></i>What we are about!</div>
+      <p class="my-3 py-3 float-start lead fs-6">
+        <%- aboutData.about %>.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat dolor est ducimus officiis! Magnam veritatis iste veniam ab quas explicabo ipsum accusamus dicta vero debitis incidunt sequi dignissimos quibusdam, possimus, cum repellendus vitae dolor laborum placeat. Possimus, enim ullam neque sequi veritatis vel laboriosam, nihil modi reprehenderit mollitia magnam at ex error sed exercitationem odio necessitatibus dicta vitae quidem nisi explicabo adipisci. Hic laudantium, laboriosam temporibus architecto nostrum porro culpa dicta rem et. Velit quas doloremque minima id porro cum deleniti obcaecati quis blanditiis, explicabo, assumenda in magni ullam ut sapiente aperiam, dolorem omnis nihil hic. Nam, excepturi, possimus culpa deserunt perspiciatis molestias vero libero consectetur ea sed accusantium cumque quos amet unde nisi consequuntur? Recusandae cum mollitia totam tenetur! Ducimus accusantium quam quas placeat praesentium ullam iusto molestias?
+      </p>
+    </div>
+  </div>
+
+</div>

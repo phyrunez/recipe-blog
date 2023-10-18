@@ -27,17 +27,17 @@
 
         <div class="col-12">
           <label for="email" class="form-label">Email</label>
-          <input type="email" name="email" id="email" class="form-control">
+          <input type="email" name="email" id="email" class="form-control shadow-none" required>
         </div>
 
         <div class="col-12">
           <label for="name" class="form-label">Recipe Name</label>
-          <input type="text" name="name" id="name" class="form-control">
+          <input type="text" name="name" id="name" class="form-control shadow-none" required>
         </div>
         
         <div class="col-12">
           <label for="description" class="form-label">Description</label>
-          <textarea name="description" id="description" class="form-control" cols="30" rows="4"></textarea>
+          <textarea name="description" id="description" class="form-control shadow-none" cols="30" rows="4" required></textarea>
         </div>
 
         <div class="col-12">
@@ -45,7 +45,7 @@
           <small>Example: Ice</small>
           <div class="ingredientList">
             <div class="ingredientDiv mb-1">
-              <input type="text" name="ingredients" class="form-control">
+              <input type="text" name="ingredients" class="form-control shadow-none" required>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
 
         <div class="col-12">
           <label for="category">Select Category</label>
-          <select class="form-select form-control" name="category" aria-label="Category">
+          <select class="form-select form-control shadow-none" name="category" aria-label="Category">
             <option selected>Select Category</option>
             <option value="Thai">Thai</option>
             <option value="American">American</option>
@@ -68,7 +68,7 @@
 
         <div class="col-12">
           <label for="image">Product Image</label>
-          <input type="file" class="form-control" name="image" accept="image/*">
+          <input type="file" class="form-control shadow-none" name="image" accept="image/*" required>
         </div>
 
         <div class="col-12">

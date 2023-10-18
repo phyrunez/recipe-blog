@@ -32,7 +32,10 @@
 
             <div class="col-md-3 text-end">
                 <form action="/search" method="post">
-                    <input type="search" name="searchTerm" class="form-control" placeholder="search..." aria-label="Search">
+                    <div class="d-flex p-2">
+                        <input type="search" name="searchTerm" class="form-control searchInput shadow-none" placeholder="search..." aria-label="Search">
+                        <button type="submit" class="btn btn-primary searchBtn"><i class="bi bi-search"></i></button>
+                    </div>
                 </form>
             </div>
         </header>
@@ -41,7 +44,7 @@
             <%- body -%>
         </main>
 
-        <footer class="py-5">
+        <footer class="py-4">
             <p>Done by Phygo</p>
         </footer>
     </div>
