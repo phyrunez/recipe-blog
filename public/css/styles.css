@@ -50,3 +50,13 @@ a { color: var(--bs-dark); }
 .searchBtn {
     border-radius: 0px 10px 10px 0px;
 }
+
+.social {
+    width: 35% !important;
+    margin: auto !important;
+}
+
+.social span {
+    padding: 0 10px 0 10px;
+    margin: 0 10px 0 10px;
+}

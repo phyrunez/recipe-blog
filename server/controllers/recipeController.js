@@ -162,21 +162,18 @@ exports.contactOnPost = async(req, res) => {
         await newContact.save();
 
         req.flash('infoSubmit', 'Your message has been received successfully, thanks!')
-        res.redirect('contact')
+        res.redirect('index')
     } catch (error) {
         req.flash('infoErrors', error)
-        res.redirect('contact')
+        res.redirect('index')
     }
 }
 
 /***** Get /Contacts */
 exports.contact = async(req, res) => {
-    const limitNumber = 7
-    const displayContact = await Contact.find({}).sort({ _id: -1 }).limit(limitNumber);
-    // console.log(displayContact)
     const infoErrorsObj = req.flash('infoErrors');
     const infoSubmitObj = req.flash('infoSubmit')
-    res.render('contact', { title: 'Recipe Blog - Contact', infoErrorsObj, infoSubmitObj, displayContact})
+    res.render('contact', { title: 'Recipe Blog - Contact', infoErrorsObj, infoSubmitObj})
 }
 
 

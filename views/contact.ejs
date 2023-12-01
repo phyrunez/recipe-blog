@@ -12,27 +12,28 @@
     </div>
 </div>
 
-<div class="row justify-content-center mb-5">
-    <div class="col-4">
-        <% if(infoSubmitObj != '') { %>  
-            <div class="col-8 alert alert-success" role="alert">
-                <%- infoSubmitObj %>
-            </div>
-        <% } %>  
+<div class="row justify-content-center mb-5 mx-auto">
     
-        <% if(infoErrorsObj != '') { %>  
-            <div class="col-8 alert alert-danger" role="alert">
-                <%- infoErrorsObj[0].message %>
-            </div>
-        <% } %>  
+    <% if(infoSubmitObj != '') { %>  
+        <div class="col-8 alert alert-success w-100" role="alert">
+            <%- infoSubmitObj %>
+        </div>
+    <% } %>  
+
+    <% if(infoErrorsObj != '') { %>  
+        <div class="col-8 alert alert-danger w-100" role="alert">
+            <%- infoErrorsObj[0].message %>
+        </div>
+    <% } %>  
+    <div class="col-8">
         <form action="/contact" enctype="multipart/form-data" method="POST">
             <div class="row g-3">
-
+    
                 <div class="col-12">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" name="name" id="name" class="form-control shadow-none" required>
                 </div>
-
+    
                 <div class="col-12">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" name="email" id="email" class="form-control shadow-none" required>
@@ -42,33 +43,20 @@
                     <label for="message" class="form-label">Description</label>
                     <textarea name="message" id="message" class="form-control shadow-none" cols="30" rows="4" required></textarea>
                 </div>
-
+    
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Send</button>
                 </div>
             </div>
         </form>
     </div>
+</div>
 
-    <div class="col-6 col-xs-12 ml-2">
-        <div class="float-start mb-3"><i class="bi bi-tag"></i>All messages sent here will be attended to!</div>
-        <% if(displayContact  != '') { %>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <% displayContact.forEach((contact, index) => { %>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="<%= index %>" aria-expanded="false" aria-controls="<%- contact.name %>">
-                                <%- contact.name %>
-                            </button>
-                        </h2>
-                        <div id="<%= index %>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="<%- contact.name %>">
-                            <div class="accordion-body lead fs-6"><%- contact.message %>.</div>
-                        </div>       
-                    </div>
-                <% }) %>
-            </div>
-        <% } else { %>
-            <p class="text-align-center">No existing Messages Found.</p>
-        <% } %>      
-    </div>
+<div class="social px-3 mx-3">
+    <span><a href="#" class="fs-3"><i class="bi bi-twitter-x"></i></a></span>
+    <span><a href="#" class="fs-3"><i class="bi bi-linkedin"></i></a></span>
+    <span><a href="#" class="fs-3"><i class="bi bi-github"></i></a></span>
+    <span><a href="https://wa.me/09023187770" class="fs-3"><i class="bi bi-whatsapp"></i></a></span>
+    <span><a href="http://www.instagram.com/itz_phygo?igshid=OGQ5ZDc2ODk2ZA==" class="fs-3"><i class="bi bi-instagram"></i></a></span>
+    <span><a href="#" class="fs-3" style="color: green"><i class="bi bi-diamond-fill"></i></a></span>
 </div>
